@@ -79,9 +79,8 @@ class PersonController extends Controller
     public function edit(string $id)
     {
         $person = Person::find($id);
-//        $department = Department::find($person->department_id);
-        $departments = Department::all();
-        return view('persons.edit',compact('person','departments'));
+        $department = Department::find($person->department_id);
+        return view('persons.edit',compact('person',''));
     }
 
     /**

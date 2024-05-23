@@ -72,6 +72,11 @@
                             @endif
                         @endforeach
                         <td>
+                            <a href="{{route('persons.show', $person->id)}}" class="btn btn-warning">
+                                <i class="bi bi-eye-fill"></i>
+                            </a>
+                        </td>
+                        <td>
                             <a href="{{route('persons.edit', $person->id)}}" class="btn btn-primary">
                                 <i class="bi bi-pencil-square"></i> </a>
                         </td>
